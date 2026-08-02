@@ -1,3 +1,15 @@
+## 0.5.7 (toyaji fork)
+* iOS: add Swift Package Manager support (based on upstream PR #206 by @danyabdo94).
+  Sources moved to `ios/video_thumbnail/Sources/video_thumbnail/` and shared by both
+  the podspec and `Package.swift` instead of being duplicated.
+* iOS: bump podspec deployment target 8.0 -> 12.0 to match `Package.swift`.
+* Android: Gradle wrapper 6.5 -> 8.14, AGP 4.1.0 -> 8.11.1 (Java 17 compatible).
+* Android: replace the dead `jcenter()` repository with `mavenCentral()`.
+* Android: compileSdk 33 -> 36, minSdk 16 -> 21, Java 17 compileOptions,
+  `lintOptions` -> `lint`, drop the `package` attribute from AndroidManifest
+  (rejected by AGP 8 when `namespace` is set).
+* Dart SDK constraint 2.16 -> 3.0 so the package resolves as a git dependency.
+
 ## 0.5.6
 * Actually add the namespace fix for Android
 * Bump to 0.5.6
